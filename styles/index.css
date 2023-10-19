@@ -1,0 +1,155 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+@keyframes topslide {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(100% + var(--button-border-width));
+    }
+}
+
+@keyframes sideslide {
+    from {
+        height: 0;
+    }
+    to {
+        height: calc(100% + var(--button-border-width));
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    font-size: 1.25em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navbar table {
+    width: 100%;
+}
+
+.navbar td {
+    width: 20%;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-clearfix {
+    height: 80px;
+    width: 100%;
+}
+
+.nav-logo {
+    font-weight: 700;
+    font-size: 1em;
+    padding: 14px 24px!important;
+    display: block;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 14px 24px;
+}
+
+.navbar a::after {
+    content: "";
+    border-bottom: 2px solid black;
+    display: block;
+    position: relative;
+    bottom: 0;
+    left:0;
+    width: 0;
+    transition: 0.25s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Main welcome container */
+.welcome-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 40px);
+    min-height: 70vh;
+    background-image: url('images/mainbg.jpg');
+    background-attachment: fixed;
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.big-container {
+    background-color: rgba(255, 255, 255);
+    max-width: 500px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 5px;
+    box-shadow: 2px;
+}
+
+.main-title {
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Shop section */
+.shop-section {
+    margin: 100px;
+}
+
+.shop-table {
+    width: 100%;
+    margin: 2em 0;
+    border-spacing: 10px;
+}
+
+.shop-table td {
+    width: 25%;
+}
+
+.item-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(78, 78, 78, 0.4), 0 -4px 8px 0 rgba(78, 78, 78, 0.4);
+    transition: 0.1s;
+}
+
+.item-card:hover {
+    transform: scale(1.01);
+}
+
+.card-text {
+    padding: 10px;
+}
+
+.card-text h3 {
+    margin: 0;
+}
+
+.card-text p {
+    font-weight: 300;
+}
